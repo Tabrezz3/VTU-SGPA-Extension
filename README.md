@@ -1,6 +1,6 @@
-# 📊 VTU SGPA Calculator — Chrome Extension
+#  VTU SGPA Calculator - Chrome Extension
 
-Instantly calculates your SGPA when you view your results on the VTU results page. No manual entry needed — it reads marks directly from the page.
+Instantly calculates your SGPA when you view your results on the VTU results page. No manual entry needed - it reads marks directly from the page.
 
 <img src="screenshots/demo-full.png" width="700" alt="VTU SGPA Calculator in action">
 
