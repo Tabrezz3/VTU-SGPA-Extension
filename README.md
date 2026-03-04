@@ -2,7 +2,7 @@
 
 Instantly calculates your SGPA when you view your results on the VTU results page. No manual entry needed — it reads marks directly from the page.
 
-![VTU SGPA Calculator in action](screenshots/demo-full.png)
+<img src="screenshots/demo-full.png" width="700" alt="VTU SGPA Calculator in action">
 
 ## ✨ Features
 
@@ -13,7 +13,7 @@ Instantly calculates your SGPA when you view your results on the VTU results pag
 - Supports **multiple semesters** (auto-detects which semester)
 - Works with both **CSE and ISE** branches
 
-![Widget close-up](screenshots/demo-widget.png)
+<img src="screenshots/demo-widget.png" width="350" alt="Widget close-up">
 
 ## 📥 Installation
 
