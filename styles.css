@@ -1,0 +1,214 @@
+#vtu-sgpa-widget {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 360px;
+  z-index: 999999;
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: #e2e8f0;
+  animation: vtu-in 0.4s cubic-bezier(.34, 1.56, .64, 1);
+  overflow: hidden;
+}
+
+@keyframes vtu-in {
+  from {
+    opacity: 0;
+    transform: translateX(80px)
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0)
+  }
+}
+
+.vtu-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 16px;
+  background: #1e293b;
+  cursor: move;
+  user-select: none;
+  border-bottom: 1px solid #2d3748;
+}
+
+.vtu-logo {
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.vtu-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #f1f5f9;
+}
+
+.vtu-sub {
+  font-size: 11px;
+  color: #64748b;
+  margin-top: 1px;
+}
+
+.vtu-x {
+  margin-left: auto;
+  background: #334155;
+  border: none;
+  color: #94a3b8;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 11px;
+  flex-shrink: 0;
+  transition: background .2s;
+}
+
+.vtu-x:hover {
+  background: #ef4444;
+  color: #fff;
+}
+
+.vtu-hero {
+  padding: 18px 16px 14px;
+  text-align: center;
+  background: linear-gradient(180deg, #1e293b, #0f172a);
+}
+
+.vtu-num {
+  font-size: 54px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -2px;
+}
+
+.vtu-lbl {
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+.vtu-meta {
+  font-size: 11px;
+  color: #475569;
+  margin-top: 5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.vtu-warn {
+  margin: 4px 12px 8px;
+  padding: 7px 12px;
+  border-radius: 8px;
+  background: #7f1d1d20;
+  border: 1px solid #ef444440;
+  color: #fca5a5;
+  font-size: 12px;
+  text-align: center;
+}
+
+.vtu-sec-title {
+  font-size: 11px;
+  font-weight: 600;
+  color: #475569;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 4px 16px 6px;
+}
+
+.vtu-list {
+  max-height: 210px;
+  overflow-y: auto;
+  padding: 0 10px;
+}
+
+.vtu-list::-webkit-scrollbar {
+  width: 4px;
+}
+
+.vtu-list::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 2px;
+}
+
+.vtu-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 8px;
+  border-radius: 8px;
+  margin-bottom: 2px;
+}
+
+.vtu-row:hover {
+  background: #1e293b;
+}
+
+.vtu-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+  min-width: 0;
+  margin-right: 8px;
+}
+
+.vtu-code {
+  font-size: 11px;
+  font-weight: 700;
+  color: #7c3aed;
+}
+
+.vtu-name {
+  font-size: 11px;
+  color: #94a3b8;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.vtu-scores {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex-shrink: 0;
+}
+
+.vtu-marks {
+  font-size: 12px;
+  font-weight: 600;
+  color: #cbd5e1;
+}
+
+.vtu-badge {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 20px;
+}
+
+.vtu-gp {
+  font-size: 11px;
+  color: #64748b;
+}
+
+.vtu-pct {
+  font-size: 11px;
+  font-weight: 600;
+  color: #94a3b8;
+  min-width: 28px;
+  text-align: right;
+}
+
+.vtu-footer {
+  font-size: 10px;
+  color: #334155;
+  text-align: center;
+  padding: 8px 16px 12px;
+  border-top: 1px solid #1e293b;
+  margin-top: 4px;
+}

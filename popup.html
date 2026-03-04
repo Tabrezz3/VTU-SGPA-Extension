@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  body { width: 270px; background: #0f172a; color: #e2e8f0; font-family: -apple-system, sans-serif; margin: 0; }
+  .hdr { background: #1e293b; padding: 14px 16px; display: flex; align-items: center; gap: 10px; border-bottom: 1px solid #2d3748; }
+  .logo { font-size: 22px; }
+  .t1 { font-size: 14px; font-weight: 700; color: #f1f5f9; }
+  .t2 { font-size: 11px; color: #64748b; }
+  .body { padding: 14px 16px; }
+  .box { background: #1e293b; border-radius: 10px; padding: 12px; margin-bottom: 12px; }
+  .box-t { font-size: 11px; font-weight: 700; color: #7c3aed; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+  .r { display: flex; justify-content: space-between; font-size: 12px; padding: 2px 0; }
+  .rg { color: #94a3b8; } .rv { color: #e2e8f0; font-weight: 600; } .rl { color: #7c3aed; font-weight: 700; width: 30px; text-align: right; }
+  .btn { width: 100%; padding: 10px; background: #7c3aed; color: #fff; border: none; border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer; }
+  .btn:hover { background: #6d28d9; }
+  .note { font-size: 10px; color: #475569; text-align: center; margin-top: 10px; line-height: 1.5; }
+</style>
+</head>
+<body>
+<div class="hdr">
+  <div class="logo">📊</div>
+  <div><div class="t1">VTU SGPA Calculator</div><div class="t2">2022 Scheme · 3rd Sem CSE/ISE</div></div>
+</div>
+<div class="body">
+  <div class="box">
+    <div class="box-t">VTU Grading Scheme</div>
+    <div class="r"><span class="rg">90–100</span><span class="rv">10 GP</span><span class="rl">O</span></div>
+    <div class="r"><span class="rg">80–89</span><span class="rv">9 GP</span><span class="rl">A+</span></div>
+    <div class="r"><span class="rg">70–79</span><span class="rv">8 GP</span><span class="rl">A</span></div>
+    <div class="r"><span class="rg">60–69</span><span class="rv">7 GP</span><span class="rl">B+</span></div>
+    <div class="r"><span class="rg">55–59</span><span class="rv">6 GP</span><span class="rl">B</span></div>
+    <div class="r"><span class="rg">50–54</span><span class="rv">5 GP</span><span class="rl">C</span></div>
+    <div class="r"><span class="rg">40–49</span><span class="rv">4 GP</span><span class="rl">P</span></div>
+    <div class="r"><span class="rg">Below 40</span><span class="rv">0 GP</span><span class="rl">F</span></div>
+  </div>
+  <div class="box">
+    <div class="box-t">Credit Map</div>
+    <div class="r"><span class="rg">BCS301/302/303</span><span class="rv">4 credits</span></div>
+    <div class="r"><span class="rg">BCS304 / BCS306x</span><span class="rv">3 credits</span></div>
+    <div class="r"><span class="rg">BCSL305 / BCS358x</span><span class="rv">1 credit</span></div>
+    <div class="r"><span class="rg">BSCK307</span><span class="rv">activity (0)</span></div>
+  </div>
+  <button class="btn" id="run">📈 Recalculate on Page</button>
+  <div class="note">Opens automatically on VTU results pages!</div>
+</div>
+<script>
+document.getElementById("run").addEventListener("click", function() {
+  chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+    chrome.scripting.executeScript({ target: { tabId: tabs[0].id }, files: ["content.js"] });
+  });
+});
+</script>
+</body>
+</html>

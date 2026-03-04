@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "VTU SGPA Calculator",
+  "version": "1.0",
+  "description": "Calculates SGPA from VTU results (2022 Scheme, 3rd Sem CSE/ISE)",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://results.vtu.ac.in/*",
+        "*://vtu.ac.in/*",
+        "*://*.vtu.ac.in/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "styles.css"
+      ],
+      "run_at": "document_idle",
+      "all_frames": true
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "48": "icon.png"
+    }
+  }
+}
